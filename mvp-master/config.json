@@ -1,0 +1,23 @@
+{
+   "channelName":"loan",
+   "chaincodeName":"loans",
+   "version":"1.0",
+   "publicHost":"http://localhost:4005",
+   "host":"localhost",
+   "port": 4005,
+   "myOrganisation":"gelios",
+   "jwt_expiretime": "36000",
+   "CC_SRC_PATH":"../artifacts",
+   "keyValueStore":"/msp/fabric-client-kvs",
+   "eventWaitTime":"30000",
+   "jwt_secret":"thisismysecret",
+   "robot_timeout":3600,
+   "robot_count_days":30,
+
+   "admins":[
+      {
+         "username":"admin",
+         "secret":"adminpw"
+      }
+   ]
+}

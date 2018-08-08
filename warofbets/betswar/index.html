@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bets war</title>
+
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
+  <link href="css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+  <script src="js/web3.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/v4-shims.js"></script>
+
+  <!-- template skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet">
+
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+  (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+          try {
+              w.yaCounter48543449 = new Ya.Metrika({
+                  id:48543449,
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true
+              });
+          } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+      if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48543449" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-custom" role="navigation">
+      <div class="container navigation">
+
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+          <!-- <a class="navbar-brand" href="index.html"> Bets War / Война Ставок
+                    <img src="img/logo.png" alt="" width="150" height="40" />
+                </a> -->
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <div id="cart"></div>
+            </li>
+            <li class="active"><a href="#intro">Дом</a></li>
+            <li><a href="#">Не нажимать!</a> </li>
+            <!-- <span class="label label-danger">65</span> -->
+
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Section: intro -->
+    <section id="intro" class="intro">
+      <div class="intro-content">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+                <img src="img/rkn-telegram.jpg" class="img-responsive" alt="" />
+
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 slogan">
+              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                <h2>RKN vs Telegram</h2>
+                <p>
+                  Делаем ставки кто кого. Или РосКомНадзор заблокирует Telegram или Telegram будет нормально работать без VPN
+                </p>
+                <p>
+                  <ul>
+                    <li>Нажимайте кнопку "вашей" стороны</li>
+                    <li>Делайте свою ставку в ETH</li>
+                    <li>Как только условие будет исполнено, то получите все ETH из банка ваших оппонентов</li>
+                    <li><strong>Условие: </strong>Через 2 месяца либо Telegram продолжает блокироваться или нормально работает без VPN</li>
+                    <li>Делайте свою ставку в ETH</li>
+                  </ul>
+                </p>
+              </div>
+              <div class="buttons">
+                <a href="#" class="btn btn-success btn-lg wow fadeInLeft transferFundsToTelegram" data-wow-duration="2s" data-wow-delay="0.2s"><i class="fas fa-heart"></i> Ставлю на Telegram <br><small>Profit: 0 </small></a>
+                <a href="#" class="btn btn-info btn-lg wow fadeInRight transferFundsToRKN" data-wow-duration="3s" data-wow-delay="0.3s"><i class="fas fa-heart"></i> Ставлю на РКН <br><small>Profit: 0 </small></a>
+              </div>
+
+              <!-- Ссылки с картинками на гитхаб, etherscan и телеграм -->
+              <div class="buttons">
+                <ul class="social">                  
+                  <li><a href="https://github.com/betswar"><i class="fab fa-github" style="font-size: 70px;"></i></a></li>
+                  <li><a href="https://t.me/BetTalks"><i class="fab fa-telegram" style="font-size: 70px;"></i></a></li>
+                  <li><a href="https://etherscan.io/address/"><i class="fab fa-ethereum" style="font-size: 70px;"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+                  <!-- <p>Исходный код смарт-контрактов см. на <u><a href="https://github.com/betswar/rkn-telegram">GitHub</a></u></p> -->
+                  <!-- <p>Смарт-контракты верифицированы (пока нет) см. на <u><a href="">Etherscan</a></u></p> -->
+                  <p>
+                    {{ А здесь, в скором времени, будет статистика по игре }}
+                  </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /Section: intro -->
+    <!-- <div class="divider-short"></div>
+
+    <section id="content1" class="home-section">
+
+      <div class="container">
+        <div class="row text-center heading">
+          <h3>Awesome features</h3>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="wow fadeInLeft" data-wow-delay="0.2s">
+              <img src="img/img-1.png" alt="" class="img-responsive" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wow fadeInRight" data-wow-delay="0.3s">
+              <div class="features">
+                <i class="fa fa-check fa-2x circled bg-skin float-left"></i>
+                <h5>Modern interface</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+              <div class="features">
+                <i class="fa fa-check fa-2x circled bg-skin float-left"></i>
+                <h5>Easy to use</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+              <div class="features">
+                <i class="fa fa-check fa-2x circled bg-skin float-left"></i>
+                <h5>Free updates</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section> -->
+    <!-- /Section: content -->
+
+    <!-- <div class="divider-short"></div>
+
+    <section id="content2" class="home-section">
+
+      <div class="container">
+        <div class="row text-center heading">
+          <h3>More features</h3>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="wow fadeInLeft" data-wow-delay="0.2s">
+              <p>
+                Lorem ipsum dolor sit amet, ipsum vocent reprimique ad eos, ludus option signiferumque an pro. Id case quaestio mei, an ipsum offendit vel, ex ius quis comprehensam. Eu per illud modus fabellas, eam an brute gubergren repudiandae.
+              </p>
+              <p>
+                Eam voluptua assentior ea, an eirmod sensibus scribentur vel. Elit nonumy indoctum per eu. Feugait omittantur ne qui, commodo invidunt ea nam
+              </p>
+              <div class="divider-short marginbot-30 margintop-30"></div>
+              <div class="features">
+                <i class="fa fa-android fa-2x circled bg-skin float-left"></i>
+                <h5>Android application</h5>
+              </div>
+              <div class="features">
+                <i class="fa fa-apple fa-2x circled bg-skin float-left"></i>
+                <h5>For Apple iOs</h5>
+              </div>
+              <div class="features">
+                <i class="fa fa-windows fa-2x circled bg-skin float-left"></i>
+                <h5>Windows version</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="wow fadeInRight" data-wow-delay="0.3s">
+              <img src="img/img-2.png" alt="" class="img-responsive" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section> -->
+    <!-- /Section: content -->
+
+    <!-- <div class="divider-short"></div>
+    <section id="works" class="home-section text-center">
+      <div class="container">
+        <div class="row text-center heading">
+          <h3>Screenshots</h3>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+
+            <div class="row gallery-item">
+              <div class="col-md-3">
+                <a href="img/works/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
+								<img src="img/works/1.jpg" class="img-responsive" alt="img">
+							</a>
+              </div>
+              <div class="col-md-3">
+                <a href="img/works/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
+								<img src="img/works/2.jpg" class="img-responsive" alt="img">
+							</a>
+              </div>
+              <div class="col-md-3">
+                <a href="img/works/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
+								<img src="img/works/3.jpg" class="img-responsive" alt="img">
+							</a>
+              </div>
+              <div class="col-md-3">
+                <a href="img/works/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/works/1@2x.jpg">
+								<img src="img/works/4.jpg" class="img-responsive" alt="img">
+							</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="callaction" class="home-section paddingtop-40">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="callaction">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="cta-text">
+                      <h3>Поддержите проект</h3>
+                      <p>Чтобы мы могли создавать новые классные игры, приложения и развивать Bets War </p>
+                      <p><strong>ETH адрес:</strong> <a href="https://etherscan.io/address/0x0071a7250ba11e086b0de4afc6e0264061d8c941"><u>здесь</u></a></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-4">
+                  <div class="wow lightSpeedIn" data-wow-delay="0.1s">
+                    <div class="cta-btn">
+                      <a href="#" class="btn btn-skin btn-lg">Contact us</a>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <ul class="social">
+                <li><a href="https://www.facebook.com/War-of-Bets-366245940539120"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/warofbets"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-medium"></i></a></li>
+                <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+              </ul>
+
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="text-left">
+                  <p>&copy;Создано в <a href="https://protocolx.github.io/">ProtocolX</a>. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInRight" data-wow-delay="0.1s">
+                <div class="text-right margintop-30">
+                  <div class="credits">
+                    <!--
+                      All the links in the footer should remain intact.
+                      You can delete the links only if you purchased the pro version.
+                      Licensing information: https://bootstrapmade.com/license/
+                      Purchase the pro version form: https://bootstrapmade.com/buy/?theme=Appland
+                    -->
+                    <a href="https://bootstrapmade.com/bootstrap-one-page-templates/">Bootstrap One Page Templates</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ethjs-query.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/ethjs-contract.min.js"></script>
+  <script src="js/engine.js"></script>
+
+  <script>
+
+    window.addEventListener('load', function() {
+      // Check if Web3 has been injected by the browser:
+      if (typeof web3 !== 'undefined') {
+        console.log("YES :)");
+        // You have a web3 browser! Continue below!
+        startApp(web3);
+      } else {
+        console.log('No web3? You should consider trying MetaMask!')
+        // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+      }
+    })
+
+    const addressTelegram = '0x0071a7250ba11e086b0de4afc6e0264061d8c941';
+    const addressRKN = '0x0071a7250ba11e086b0de4afc6e0264061d8c941';
+    
+    var buttonTelegram = document.querySelector('.transferFundsToTelegram')
+    buttonTelegram.addEventListener('click', function() {
+      console.log("step1");
+
+      const abiTelegram = [{
+        "constant": false,
+        "inputs": [
+                    {
+                    "name": "_to",
+                "type": "address"
+            },
+            {
+                "name": "_value",
+                                "type": "uint256"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+      }];
+
+      console.log("const TelegramSupporters = contract(abiTelegram)");
+      const TelegramSupporters = contract(abiTelegram)
+
+      console.log("const telegramSupport = TelegramSupporters.at(addressTelegram)");
+      const telegramSupport = TelegramSupporters.at(addressTelegram)
+
+      telegramSupport.transfer(toAddress, value, { from: addr }).then(function (txHash) {
+        console.log('Transaction sent')
+        console.dir(txHash)
+        waitForTxToBeMined(txHash)
+      }).catch(console.error)
+
+    });
+
+    var buttonRKN = document.querySelector('.transferFundsToRKN')
+    buttonRKN.addEventListener('click', function() {
+      console.log("step1");
+
+      const abiRKN = [{
+        "constant": false,
+        "inputs": [
+                    {
+                    "name": "_to",
+                "type": "address"
+            },
+            {
+                "name": "_value",
+                                "type": "uint256"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "name": "success",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+      }];
+
+      const RKNSupporters = contract(abiRKN)
+
+      const RKNSupport = RKNSupporters.at(addressRKN)
+
+       RKNSupport.transfer(toAddress, value, { from: addr }).then(function (txHash) {
+        console.log('Transaction sent')
+        console.dir(txHash)
+        waitForTxToBeMined(txHash)
+      }).catch(console.error)
+    });
+
+  async function waitForTxToBeMined (txHash) {
+    
+    let txReceipt 
+    while (!txReceipt) {
+      try {
+        txReceipt = await eth.getTransactionReceipt(txHash)
+        } catch (err) {
+          return indicateFailure(err)
+          }
+    }
+    indicateSuccess()
+  }
+
+
+  </script>
+
+</body>
+
+</html>

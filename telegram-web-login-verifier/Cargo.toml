@@ -1,0 +1,12 @@
+[package]
+name = "telegram-web-login-verifier"
+version = "0.1.0"
+authors = ["Claudio4 <me@claudio4.com>"]
+repository = "https://github.com/claudio4/telegram-web-login-verifier"
+homepage = "https://github.com/claudio4/telegram-web-login-verifier"
+license = "MIT"
+description = "A rust library to verify a login request generated with the Telegram Login Widget."
+
+[dependencies]
+ring = "0.12.1"
+hex = "0.3.1"

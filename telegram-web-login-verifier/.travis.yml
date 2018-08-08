@@ -1,0 +1,43 @@
+sudo: false
+language: rust
+# necessary for `travis-cargo coveralls --no-sudo`
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - binutils-dev # optional: only required for the --verify flag of coveralls
+
+# run builds for all the trains (and more)
+rust:
+  - beta
+  # check it compiles on the latest stable compiler
+  - stable
+
+# load travis-cargo
+before_script:
+  - |
+      pip install 'travis-cargo<0.2' --user &&
+      export PATH=$HOME/.local/bin:$PATH
+
+# the main build
+script:
+  - |
+      travis-cargo build &&
+      travis-cargo test &&
+      travis-cargo bench &&
+      travis-cargo --only stable doc
+after_success:
+  # upload the documentation from the build with stable (automatically only actually
+  # runs on the master branch, not individual PRs)
+  - travis-cargo --only stable doc-upload
+  # measure code coverage and upload to coveralls.io (the verify
+  # argument mitigates kcov crashes due to malformed debuginfo, at the
+  # cost of some speed <https://github.com/huonw/travis-cargo/issues/12>)
+  - travis-cargo coveralls --no-sudo --verify
+
+env:
+  global:
+    # encrypted github token for doc upload (see `GH_TOKEN` link above)
+    - secure:  tibuNzSpxWFM+KTz8DsNFKLw9sFrFBV3jDNgLMkrBnGHNFixgEErEA76WvU5+n8hfPmGcK1w0oZMEJrGi8x28nMg91Weixq6jQXiAni9AQynVT3o+fp4TVB2XgcOyTIj0D7j6m0XbAqVbl8oVKmMOgvBiz3XyxeLFxgeX3v3XTxC4zAbuG1Auv+uVQvNbA6G/I9S2sdRB77sy53gHTkmmT2aS0OI6UDVyaGw+K+ucp2zIMp49Le4pm8t1zGSh9daYyn939MXJeIvIWuW6VHn5rhKodMvy8hkBYSMbs15poQjUbtWPQKSxtNQBTRXAxgRMr4n/w+EyGRz2s7pCWp5m3oLs7oxmAV9I4Qo1PB4umMAYoux3QmuYwIAMiSA/etSAaL5Z38r/udjuaz7jeM6bUcn00MLM2nZbjaZsZpTt6BGFa/wEgsz+Hshklud/uSgh48phwCexUwVk0nk4K4XsH/xF9Kl9BpLxuJavG9eAiOHs0aMGlye+yXtzQKy22Es1jH4VdvrCt2nIajRpRr+Wl/7PUtIY+1f6zNQYO952TsK1Bdlvvm/vQlQpwfV4USruZbdS8IklKOw5kzBVE941M1qOrvHVyd26J/wQAq6wRxSnSFrbL4L7S18TdgasH8M2H9jKCrHZXTzFFqdlYhubRHefVIECF/0ik6wv7FOs9g=

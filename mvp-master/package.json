@@ -1,0 +1,42 @@
+{
+  "name": "loan",
+  "version": "1.0.0",
+  "description": "This is LOAN project, using node.js SDK APIs for Hyperledger Fabric (BACK)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "DEV=true npm -s start",
+    "test": "TEST=auto npm -s start"
+  },
+  "keywords": [
+    "fabric-client app",
+    "loan node v1.0"
+  ],
+  "engines": {
+    "node": ">=6.9.5 <7.0",
+    "npm": ">=3.10.10 <4.0"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "dateformat": "^3.0.2",
+    "express": "^4.15.2",
+    "express-bearer-token": "^2.1.0",
+    "express-jwt": "^5.1.0",
+    "express-session": "^1.15.2",
+    "fabric-ca-client": "^1.0.0",
+    "fabric-client": "^1.0.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^2.0.0",
+    "google-auth-library": "^0.11.0",
+    "googleapis": "^22.2.0",
+    "jq": "^1.7.2",
+    "jsonwebtoken": "^7.3.0",
+    "log4js": "^0.6.38",
+    "nodemailer": "^4.1.3",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "restler": "^3.4.0"
+  }
+}
